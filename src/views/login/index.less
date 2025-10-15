@@ -1,0 +1,163 @@
+.login-container {
+  height: 100%;
+  background-image: url("@/assets/images/login_bg.svg");
+  background-color: #eeeeee;
+  background-size: 100% 100%;
+  background-size: cover;
+  background-position: 50%;
+  //min-width: 550px;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+
+  .login-box {
+    width: 96%;
+    height: 94%;
+    min-height: 820px;
+    background-color: hsla(0, 0%, 100%, 0.85);
+    border-radius: 10px;
+    padding: 0 8% 0 50px;
+    box-sizing: border-box;
+    display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: space-evenly;
+
+    .login-title {
+      font-size: 42px;
+      font-weight: bold;
+      color: black;
+      height: 200px;
+      width: 100%;
+      line-height: 200px;
+      text-align: center;
+      white-space: normal;
+      overflow: hidden;
+      display: inline-block;
+      text-overflow: ellipsis;
+    }
+
+
+    .login-content {
+
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      box-sizing: border-box;
+
+      .login-left {
+        width: 900px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .login-form {
+        width: 400px;
+        height: 512px;
+        padding: 50px 40px 45px 40px;
+        border-radius: 10px;
+        box-shadow: 2px 3px 7px rgb(0 0 0 / 20%);
+        flex-shrink: 0;
+        position: relative;
+
+        .login-logo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          //margin-bottom: 45px;
+
+          .login-icon {
+            width: 3000px;
+            height: 120px;
+          }
+
+          .logo-text {
+            font-weight: bold;
+            font-size: 42px;
+            padding-left: 25px;
+            white-space: nowrap;
+            color: #181818;
+          }
+        }
+
+        .login-to {
+          margin: 10px 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-device-width: 768px) {
+  .login-left {
+    display: none;
+  }
+
+  .login-container .login-box {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .login-container .login-box .login-content .login-form {
+    box-shadow: none;
+  }
+}
+
+
+.qr-login-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 60px;
+  overflow: hidden;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQBAMAAAAVaP+LAAAAElBMVEVHcEx6pf96pf96o/96o/97o/8Pt1s1AAAABXRSTlMAfz/dXxFC4+EAAAEeSURBVGje7djRbcJAEEXReYgO0DSAlApcAiWg7b8VfpwI22sSdm8sVnr3M6CjQZDJhAjnnHMDlqWUiCjraj97emybKCiSgkRBkRQkCoqkIFFQvICqTzwE2sMNfTSU+2//4oP4KyQKWo/UDomCViN1QKKg5Ug90Ok6l53QT1+GXnSbpgmBVMqdeWlJQaKgSAoSBcVlAzXu7DMFhaFDIWH3Ubaffn+6vd+Hdm7vBkgUVL+9WyBRUHwk5Aat/j+goc2hS0CioPqXOdE4EgJV/6BE40gM5Eb+rvL5d6UZEgV9j9QPiYLmkQBIFLRcldE7EgEtVmX0joRA86oEErYZk4KE7eqkIP3HwWRoJCgpSNg1khQk7D7yXhp3LznnnDuqB9Ji/xpvUnncAAAAAElFTkSuQmCC) no-repeat 100% 0;
+  background-size: 100%;
+}
+
+
+.pc-login-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 60px;
+  overflow: hidden;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQBAMAAAAVaP+LAAAAD1BMVEVHcEx6pf97o/97o/97o//AVc6AAAAABHRSTlMAfdc6588X8wAAAP9JREFUaN7t2M0Jg0AYhOFvtIEctoAcLMAWXLb/mnIKOe33o0NgYd5zeBiMCq6ZUkqppcMxMvVX4Ow5Z4x++tA2sr19qKWhy4eOcPP3CnT/F+Hk3yWIoDMF7TGUvE0WhcK/XpCg6DVCgsCCrLEgsCATtCjUWBBYUDgpDYEFRZPyEFhQMKkAgQX5kyoQWJA7qQSBBXmTahBYkDOpCIEFzSdVIbCg6aQyBBY0m1SHwIImk25AYEHPvzWWg3YWtJGg+OM4fy9dN0457hwgpCf10yiTwkMWZxLlLIgFWWNBYEHWWBBoT3tjQWBB1mjnijpa/Wt6CSz6ElBKKaWUUkqt1get9boWWrC+ugAAAABJRU5ErkJggg==) no-repeat 100% 0;
+  background-size: 100%;
+}
+
+.qr-code-wrap {
+  position: relative;
+  text-align: center;
+}
+
+.qr-mp-code {
+  text-align: center;
+  width: auto;
+  overflow: hidden;
+  user-select: none;
+}
+
+.qr-code-img {
+  width: 250px;
+  height: 250px;
+}
+
+.qr-mp-code-wrap {
+  width: auto !important;
+  //height: 265px;
+}
+
+
+.qr-mp-code-img {
+  width: auto;
+  height: 240px;
+}
+

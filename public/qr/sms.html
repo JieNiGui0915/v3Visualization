@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="../favicon.ico">
+  <title>朗朝智慧</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <meta name="color-scheme" content="light dark">
+  <link href="./sms.css" rel="stylesheet">
+</head>
+<body>
+<div class="body">
+  <div class="title">大宗货物整车区域物流平台登录</div>
+  <div class="content" id="contentId">
+    <div class="top-img">
+      <img class="logo-img" src="../favicon.ico" alt="logo">
+    </div>
+    <div class="top-title">
+      <div class="top-title-sub">
+        如遇到登录问题，请联系管理员
+      </div>
+    </div>
+    <div class="middle">
+      <div class="form">
+        <div class="form_item">
+          <div class="form_item_value flex-1">
+            <input oninput="handleInputChange(event,'phone')" class="form_input width-100p" type="tel" placeholder="请输入手机号"/>
+          </div>
+        </div>
+        <div class="form_item">
+          <div class="form_item_value">
+            <input oninput="handleInputChange(event,'captcha')" class="form_input" type="number" placeholder="请输入图形验证码"/>
+            <img class="input_after_img" src="" id="captchaImageId" alt="图形验证码" onclick="requestNewCaptchaImage()">
+          </div>
+        </div>
+        <div class="form_item">
+          <div class="form_item_value">
+            <input oninput="handleInputChange(event,'smsCode')" class="form_input" type="number" placeholder="请输入短信验证码"/>
+            <div class="input_after_btn" onclick="handleGetSms()" id="smsTipId"></div>
+          </div>
+        </div>
+        <div class="form_item form_item_btn_wrap">
+          <div class="form_item_value">
+            <a class="weui-btn weui-btn_primary width-90p" onclick="handleSubmit()">登录</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="weui-form__ft wechat-footer">
+    <div class="weui-form__extra-area">
+      <div class="weui-footer">
+        <p class="weui-footer__links">
+          <a href="javascript:" class="weui-footer__link">朗朝智慧</a>
+        </p>
+        <p class="weui-footer__text">Copyright © 2023-<span id="currentYearId"></span> langzhao.cn</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="js_dialog" role="dialog" aria-hidden="false" aria-modal="true" aria-labelledby="js_title" style="display: none" id="dialogId" tabindex="0">
+  <div class="weui-mask"></div>
+  <div class="weui-dialog">
+    <div class="weui-dialog__bd">已成功登录</div>
+    <div class="weui-dialog__ft">
+      <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary" onclick="handleBtnConfirm()">知道了</a>
+    </div>
+  </div>
+</div>
+<div role="alert" id="toastId" style="display: none;">
+  <div class="weui-mask_transparent"></div>
+  <div class="weui-toast weui-toast_text">
+      <p class="weui-toast__content" id="toastTextId">已完成</p>
+  </div>
+</div>
+<script src="./sms.js?i=1" type="text/javascript"></script>
+</body>
+</html>

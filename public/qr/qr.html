@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="../favicon.ico">
+  <title>朗朝智慧</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <meta name="color-scheme" content="light dark">
+  <link href="./qr.css" rel="stylesheet">
+</head>
+<body>
+<div class="body">
+  <div class="title">大宗货物整车区域物流平台登录</div>
+  <div class="content" id="contentId" style="display: none">
+    <div class="top-img">
+      <img class="logo-img" src="../favicon.ico" alt="logo">
+    </div>
+    <div class="top-title">
+      <div class="top-title-main">
+        是否确认登录朗朝智慧后台管理平台
+      </div>
+      <div class="top-title-sub">
+        如遇到登录问题，请联系管理员
+      </div>
+    </div>
+    <div class="middle">
+      <div class="weui-cells weui-cells_checkbox" style="display: none">
+        <label class="weui-cell weui-cell_active weui-check__label" for="s12">
+          <div class="weui-cell__hd">
+            <input type="checkbox" name="checkbox1" class="weui-check" id="s12">
+            <i class="weui-icon-checked"></i>
+          </div>
+          <div class="weui-cell__bd">
+            <p>7天内免登录</p>
+          </div>
+        </label>
+      </div>
+    </div>
+    <div class="confirm-btn-wrap">
+      <a href="javascript:" role="button" class="weui-btn weui-btn_primary" onclick="handleConfirm()">确认登录</a>
+      <a href="javascript:" role="button" class="weui-btn weui-btn_default" onclick="handleCancel()">取消</a>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="weui-form__ft wechat-footer">
+    <div class="weui-form__extra-area">
+      <div class="weui-footer">
+        <p class="weui-footer__links">
+          <a href="javascript:" class="weui-footer__link">朗朝智慧</a>
+        </p>
+        <p class="weui-footer__text">Copyright © 2023-<span id="currentYearId"></span> langzhao.cn</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="js_dialog" role="dialog" aria-hidden="false" aria-modal="true" aria-labelledby="js_title" style="display: none" id="dialogId" tabindex="0">
+  <div class="weui-mask"></div>
+  <div class="weui-dialog">
+    <div class="weui-dialog__bd">已成功登录</div>
+    <div class="weui-dialog__ft">
+      <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary" onclick="handleBtnConfirm()">知道了</a>
+    </div>
+  </div>
+</div>
+<script src="./qr.js?i=1" type="text/javascript"></script>
+</body>
+</html>
